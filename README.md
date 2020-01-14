@@ -169,3 +169,11 @@ Po stlačení ikony hamburgera alebo prejdení zľava sa zobrazí rozbaľovacia 
 
 V aplikácii Shell sa pri spustení aplikácie vytvorí každá obsahová stránka, ktorá je potomkom objektu `ShellContent`. Pridanie ďalších objektov `ShellContent` pomocou tohto prístupu bude mať za následok vytvorenie ďalších stránok počas spúšťania aplikácie, čo môže viesť ku pomalému spusteniu. `Shell` je však tiež schopná vytvárať stránky na požiadanie v reakcii na navigáciu. Viac informácií nájdete v príručke [Efektívne načítanie stránky](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/tabs#efficient-page-loading) v príručke [Xamarin.Forms Shell Tabs](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/tabs).
 
+Viac info tu:
+* [Flyout](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/flyout)
+* [Tabs](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/tabs)
+* [Page configuration](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/configuration)
+* [Navigation](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/navigation)
+* [Search](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/search)
+* [Lifecycle](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/lifecycle)
+* [Custom renderers](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/customrenderers)
