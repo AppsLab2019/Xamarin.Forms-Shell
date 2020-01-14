@@ -87,7 +87,7 @@ namespace Xaminals
 }
 ````
 
-#### Spustite aplikáciu Shell
+#### Prepojenie aplikácie so Shell
 
 After creating the XAML file that subclasses the `Shell` object, the MainPage property of the App class should be set to the subclassed Shell object:
 
