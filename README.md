@@ -2,11 +2,53 @@
 
 ## Shell
 
-Zdroj: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/
+### Úvod
 
-Xamarin.Forms `Shell` znižuje zložitosť vývoja mobilných aplikácií poskytovaním základných funkcií, ktoré väčšina mobilných aplikácií vyžaduje. To zahŕňa bežné používateľské skúsenosti s navigáciou, navigačnú schému založenú na URI a integrovaný obslužný program vyhľadávania.
+Zdroj: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/introduction
+
+[Príklad - Xaminals](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+
+Xamarin.Forms Shell znižuje zložitosť vývoja mobilných aplikácií poskytovaním základných funkcií, ktoré väčšina mobilných aplikácií vyžaduje, vrátane:
+* Jedno miesto na opísanie vizuálnej hierarchie aplikácie.
+* Bežná skúsenosť používateľa navigácie.
+* Navigačná schéma založená na URI, ktorá umožňuje navigáciu na ľubovoľnú stránku v aplikácii.
+* Integrovaný obslužný program vyhľadávania.
+
+Aplikácie Shell navyše profitujú zo zvýšenej rýchlosti vykresľovania a zníženej spotreby pamäte.
+
+Existujúce aplikácie môžu využívať Shell a okamžite profitovať z vylepšenia navigácie, výkonu a rozšíriteľnosti.
+
+#### Platform support
+
+Xamarin.Forms Shell je plne k dispozícii pre iOS a Android, ale iba čiastočne je k dispozícii na platforme Universal Windows Platform (UWP). Okrem toho `Shell` v súčasnosti experimentuje na `UWP` a môže sa použiť iba pridaním nasledujúceho riadku kódu do triedy `App` vo vašom projekte UWP, skôr ako zavoláte `Forms.Init`:
+
+````csharp
+global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
+````
+
+#### Skúsenosť s navigáciou v prostredí
+
+`Shell` poskytuje premyslený zážitok z navigácie založený na flyouts a taboch. Najvyššou úrovňou navigácie v aplikácii `Shell` je v závislosti od požiadaviek navigácie aplikácie flyout alebo spodná lišta - tabs. Nasledujúci príklad zobrazuje aplikáciu, v ktorej je najvyššou úrovňou navigácie flyout:
+
+![Flyout](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/introduction-images/flyout.png)
+
+Výsledkom výberu rozbaľovacej položky bude spodná karta - tab, ktorá predstavuje vybratú a zobrazenú položku:
+
+![Selected Menu Item](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/introduction-images/monkeys.png)
+
+POZN: Ak nie je rozbaľovacia ponuka otvorená, dolná lišta kariet sa môže považovať za najvyššiu úroveň navigácie v aplikácii.
+
+Každá karta zobrazuje stránku `ContentPage`. Ak však spodná karta obsahuje viac ako jednu stránku, stránky sa dajú navigovať pomocou horného panela kariet:
+
+![Top Tabs](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/introduction-images/cats.png)
+
+Na každej karte je možné navigovať ďalšie objekty `ContentPage`:
+
+![ContentPage](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/introduction-images/cat-details.png)
 
 ### Vytvorte aplikáciu Xamarin.Forms Shell
+
+Zdroj: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/create
 
 [Príklad - Xaminals](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -30,7 +72,7 @@ Prvým krokom pri vytváraní aplikácie Xamarin.Forms Shell je pridanie súboru
 ````
 
 Nasledujúci príklad zobrazuje súbor "code-behind", `AppShell.xaml.cs`:
-````xaml
+````csharp
 using Xamarin.Forms;
 
 namespace Xaminals
@@ -49,7 +91,7 @@ namespace Xaminals
 
 After creating the XAML file that subclasses the `Shell` object, the MainPage property of the App class should be set to the subclassed Shell object:
 
-````xaml
+````csharp
 namespace Xaminals
 {
     public partial class App : Application
