@@ -8,7 +8,7 @@ Xamarin.Forms `Shell` znižuje zložitosť vývoja mobilných aplikácií poskyt
 
 ### Vytvorte aplikáciu Xamarin.Forms Shell
 
-[Ďalší príklad - Xaminals](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[Príklad - Xaminals](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Proces vytvorenia aplikácie Xamarin.Forms Shell je nasledujúci:
 
